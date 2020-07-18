@@ -41,8 +41,8 @@ curl -X POST
     -H 'Content-Type: application/json' 
     http://<your-neptune-endpoint>:8182/loader -d '{ 
       "source" : "s3://<s3-bucket>/creditcardfraud",
-      "accessKey" : "",
-      "secretKey" : "",
+      "accessKey" : "xxxx",
+      "secretKey" : "xxxx",
       "format" : "csv",
       "region" : "us-east-1",
       "failOnError" : "FALSE"
@@ -86,11 +86,13 @@ refer this to setup Gremlin console and connect to your Neptune cluster
 
 `g.V().hasLabel("Merchant").limit(5)`
 
+```
 ==>v[Justice]
 ==>v[Sears]
 ==>v[Sprint]
 ==>v[Abercrombie]
 ==>v[Wallmart]
+```
 
 * List Persons and merchants where they have done transactions
 
